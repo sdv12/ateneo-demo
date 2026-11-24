@@ -1,0 +1,1700 @@
+import { bronquiolitis } from "./data/bronquiolitis";
+import { cetoacidosis } from "./data/cetoacidosis";
+import { chagas } from "./data/chagas";
+import { cistitis } from "./data/cistitis";
+import { dengue } from "./data/dengue";
+import { diarrea } from "./data/diarrea";
+import { faringitis } from "./data/faringitis";
+import { guillainBarre } from "./data/guillain-barre";
+import { hta } from "./data/hta";
+import { iamAtipico } from "./data/iam-atipico";
+import { iamInferior } from "./data/iam-inferior";
+import { icDescompensada } from "./data/ic-descompensada";
+import { preeclampsia } from "./data/preeclampsia";
+import { suh } from "./data/suh";
+import { acv } from "./data/acv";
+import { anemiaFerropenica } from "./data/anemia-ferropenica";
+import { apendicitis } from "./data/apendicitis";
+import { crisisAsmatica } from "./data/crisis-asmatica";
+import { dm2 } from "./data/dm2";
+import { ectopico } from "./data/ectopico";
+import { epoc } from "./data/epoc";
+import { meningitis } from "./data/meningitis";
+import { monoxido } from "./data/monoxido";
+import { nac } from "./data/nac";
+import { otitis } from "./data/otitis";
+import { pielonefritisEmbarazo } from "./data/pielonefritis-embarazo";
+import { tbc } from "./data/tbc";
+import { tep } from "./data/tep";
+import { celulitis } from "./data/celulitis";
+import { colecistitis } from "./data/colecistitis";
+import { colicoRenal } from "./data/colico-renal";
+import { convulsionFebril } from "./data/convulsion-febril";
+import { crup } from "./data/crup";
+import { esguince } from "./data/esguince";
+import { fibrilacionAuricular } from "./data/fibrilacion-auricular";
+import { hda } from "./data/hda";
+import { hipoglucemia } from "./data/hipoglucemia";
+import { ictericiaNeonatal } from "./data/ictericia-neonatal";
+import { lumbalgia } from "./data/lumbalgia";
+import { panico } from "./data/panico";
+import { sifilisEmbarazo } from "./data/sifilis-embarazo";
+import { urgenciaHipertensiva } from "./data/urgencia-hipertensiva";
+import { artritisReumatoidea } from "./data/artritis-reumatoidea";
+import { epi } from "./data/epi";
+import { escabiosis } from "./data/escabiosis";
+import { gota } from "./data/gota";
+import { hipotiroidismo } from "./data/hipotiroidismo";
+import { intentoSuicidio } from "./data/intento-suicidio";
+import { intoxicacionAlcoholica } from "./data/intoxicacion-alcoholica";
+import { iraPrerrenal } from "./data/ira-prerrenal";
+import { maltratoInfantil } from "./data/maltrato-infantil";
+import { nacPediatrica } from "./data/nac-pediatrica";
+import { politrauma } from "./data/politrauma";
+import { retencionUrinaria } from "./data/retencion-urinaria";
+import { vaginosis } from "./data/vaginosis";
+import { zoster } from "./data/zoster";
+import { abortoIncompleto } from "./data/aborto-incompleto";
+import { anafilaxia } from "./data/anafilaxia";
+import { anticoncepcionEmergencia } from "./data/anticoncepcion-emergencia";
+import { cirrosisPbe } from "./data/cirrosis-pbe";
+import { conjuntivitis } from "./data/conjuntivitis";
+import { coqueluche } from "./data/coqueluche";
+import { delirium } from "./data/delirium";
+import { depresionPosparto } from "./data/depresion-posparto";
+import { diabetesGestacional } from "./data/diabetes-gestacional";
+import { erge } from "./data/erge";
+import { escorpionismo } from "./data/escorpionismo";
+import { fracturaCadera } from "./data/fractura-cadera";
+import { graves } from "./data/graves";
+import { hemorragiaPosparto } from "./data/hemorragia-posparto";
+import { ituLactante } from "./data/itu-lactante";
+import { leptospirosis } from "./data/leptospirosis";
+import { menopausia } from "./data/menopausia";
+import { migrana } from "./data/migrana";
+import { mordeduraPerro } from "./data/mordedura-perro";
+import { neumotoraxEspontaneo } from "./data/neumotorax-espontaneo";
+import { ofidismo } from "./data/ofidismo";
+import { pancreatitis } from "./data/pancreatitis";
+import { rinosinusitis } from "./data/rinosinusitis";
+import { scasest } from "./data/scasest";
+import { sindromeNefrotico } from "./data/sindrome-nefrotico";
+import { tecAnticoagulado } from "./data/tec-anticoagulado";
+import { vihDebut } from "./data/vih-debut";
+import { vphHsil } from "./data/vph-hsil";
+import { cancerColorrectal } from "./data/cancer-colorrectal";
+import { cancerMama } from "./data/cancer-mama";
+import { chagasCongenito } from "./data/chagas-congenito";
+import { diverticulitis } from "./data/diverticulitis";
+import { endometriosis } from "./data/endometriosis";
+import { glomerulonefritis } from "./data/glomerulonefritis";
+import { hantavirus } from "./data/hantavirus";
+import { hepatitisB } from "./data/hepatitis-b";
+import { hidatidosis } from "./data/hidatidosis";
+import { organofosforados } from "./data/organofosforados";
+import { quemadura } from "./data/quemadura";
+import { sincope } from "./data/sincope";
+import { statusEpileptico } from "./data/status-epileptico";
+import { vppb } from "./data/vppb";
+import { anemiaMegaloblastica } from "./data/anemia-megaloblastica";
+import { artritisSeptica } from "./data/artritis-septica";
+import { candidiasisVulvovaginal } from "./data/candidiasis-vulvovaginal";
+import { constipacionFuncional } from "./data/constipacion-funcional";
+import { demencia } from "./data/demencia";
+import { dermatitisAtopica } from "./data/dermatitis-atopica";
+import { desprendimientoPlacenta } from "./data/desprendimiento-placenta";
+import { diseccionAortica } from "./data/diseccion-aortica";
+import { dislipemia } from "./data/dislipemia";
+import { dispepsiaHp } from "./data/dispepsia-hp";
+import { endocarditis } from "./data/endocarditis";
+import { episodioManiaco } from "./data/episodio-maniaco";
+import { estenosisPilorica } from "./data/estenosis-pilorica";
+import { herniaAtascada } from "./data/hernia-atascada";
+import { hiponatremia } from "./data/hiponatremia";
+import { impetigo } from "./data/impetigo";
+import { influenza } from "./data/influenza";
+import { insuficienciaSuprarrenal } from "./data/insuficiencia-suprarrenal";
+import { invaginacion } from "./data/invaginacion";
+import { isquemiaAgudaMiembro } from "./data/isquemia-aguda-miembro";
+import { mielomaHipercalcemia } from "./data/mieloma-hipercalcemia";
+import { mononucleosis } from "./data/mononucleosis";
+import { neutropeniaFebril } from "./data/neutropenia-febril";
+import { obstruccionBridas } from "./data/obstruccion-bridas";
+import { paracetamol } from "./data/paracetamol";
+import { parkinson } from "./data/parkinson";
+import { pieDiabetico } from "./data/pie-diabetico";
+import { placentaPrevia } from "./data/placenta-previa";
+import { torsionTesticular } from "./data/torsion-testicular";
+import { varicela } from "./data/varicela";
+import { depresionMayor } from "./data/depresion-mayor";
+import { tabaquismo } from "./data/tabaquismo";
+import { controlPrenatal } from "./data/control-prenatal";
+import { heridaTetanos } from "./data/herida-tetanos";
+import { uretritis } from "./data/uretritis";
+import { urticaria } from "./data/urticaria";
+import { hepatitisA } from "./data/hepatitis-a";
+import { mastitis } from "./data/mastitis";
+import { fracturaRadio } from "./data/fractura-radio";
+import { sarampion } from "./data/sarampion";
+import { tvp } from "./data/tvp";
+import { toxoplasmosisEmbarazo } from "./data/toxoplasmosis-embarazo";
+import { amenazaPartoPretermino } from "./data/amenaza-parto-pretermino";
+import { celiaquia } from "./data/celiaquia";
+import { taquicardiaSupraventricular } from "./data/taquicardia-supraventricular";
+import { glaucomaAgudo } from "./data/glaucoma-agudo";
+import { cuerpoExtrano } from "./data/cuerpo-extrano";
+import { violenciaGenero } from "./data/violencia-genero";
+import { triquinosis } from "./data/triquinosis";
+import { shockSeptico } from "./data/shock-septico";
+import { hsa } from "./data/hsa";
+import { lupus } from "./data/lupus";
+import { leucemia } from "./data/leucemia";
+import { hiperpotasemia } from "./data/hiperpotasemia";
+import { estadoHiperosmolar } from "./data/estado-hiperosmolar";
+import { abstinenciaAlcoholica } from "./data/abstinencia-alcoholica";
+import { primerEpisodioPsicotico } from "./data/primer-episodio-psicotico";
+import { cancerPulmon } from "./data/cancer-pulmon";
+import { isquemiaMesenterica } from "./data/isquemia-mesenterica";
+import { meningococcemia } from "./data/meningococcemia";
+import { nacAdultoJoven } from "./data/nac-adulto-joven";
+import { hipoglucemiaDm1 } from "./data/hipoglucemia-dm1";
+import { faringitisAlergia } from "./data/faringitis-alergia";
+import { otitisLactante } from "./data/otitis-lactante";
+import { anemiaLactante } from "./data/anemia-lactante";
+import { asmaAdulta } from "./data/asma-adulta";
+import { apendicitisNino } from "./data/apendicitis-nino";
+import { deshidratacionAdultaMayor } from "./data/deshidratacion-adulta-mayor";
+import { faReciente } from "./data/fa-reciente";
+import { bronquiolitisPrematuro } from "./data/bronquiolitis-prematuro";
+import { iamCocaina } from "./data/iam-cocaina";
+import { cadEuglucemica } from "./data/cad-euglucemica";
+import { preeclampsiaPosparto } from "./data/preeclampsia-posparto";
+import { tepMasivo } from "./data/tep-masivo";
+import { hdaVariceal } from "./data/hda-variceal";
+import { giardiasis } from "./data/giardiasis";
+import { hemorroides } from "./data/hemorroides";
+import { rinitisAlergica } from "./data/rinitis-alergica";
+import { tunelCarpiano } from "./data/tunel-carpiano";
+import { tinaCapitis } from "./data/tina-capitis";
+import { estenosisAortica } from "./data/estenosis-aortica";
+import { anorexiaNerviosa } from "./data/anorexia-nerviosa";
+import { hiperemesis } from "./data/hiperemesis";
+import { pti } from "./data/pti";
+import { cancerProstata } from "./data/cancer-prostata";
+import { golpeDeCalor } from "./data/golpe-de-calor";
+import { colaDeCaballo } from "./data/cola-de-caballo";
+import { arteritisTemporal } from "./data/arteritis-temporal";
+import { kawasaki } from "./data/kawasaki";
+import { colangitis } from "./data/colangitis";
+import { htaAdultoMayor } from "./data/hta-adulto-mayor";
+import { dm2Adolescente } from "./data/dm2-adolescente";
+import { gotaMujer } from "./data/gota-mujer";
+import { migranaAdolescente } from "./data/migrana-adolescente";
+import { erisipela } from "./data/erisipela";
+import { chagasMujerJoven } from "./data/chagas-mujer-joven";
+import { sifilisSecundaria } from "./data/sifilis-secundaria";
+import { pielonefritisMujerJoven } from "./data/pielonefritis-mujer-joven";
+import { hipotiroidismoAmiodarona } from "./data/hipotiroidismo-amiodarona";
+import { hipertiroidismoApatico } from "./data/hipertiroidismo-apatico";
+import { conjuntivitisNeonatal } from "./data/conjuntivitis-neonatal";
+import { sarnaCostrosa } from "./data/sarna-costrosa";
+import { zosterOftalmico } from "./data/zoster-oftalmico";
+import { tbcInfantil } from "./data/tbc-infantil";
+import { ictericiaIncompatibilidad } from "./data/ictericia-incompatibilidad";
+import { convulsionFebrilCompleja } from "./data/convulsion-febril-compleja";
+import { ectopicoMetotrexato } from "./data/ectopico-metotrexato";
+import { anafilaxiaNino } from "./data/anafilaxia-nino";
+import { varicelaEmbarazo } from "./data/varicela-embarazo";
+import { epiAbsceso } from "./data/epi-absceso";
+import { dengueShock } from "./data/dengue-shock";
+import { abortoSeptico } from "./data/aborto-septico";
+import { iraNefrotoxica } from "./data/ira-nefrotoxica";
+import { eapHipertensivo } from "./data/eap-hipertensivo";
+import { statusNino } from "./data/status-nino";
+import { acne } from "./data/acne";
+import { cefaleaTensional } from "./data/cefalea-tensional";
+import { insomnio } from "./data/insomnio";
+import { sindromeMetabolico } from "./data/sindrome-metabolico";
+import { artrosisRodilla } from "./data/artrosis-rodilla";
+import { epistaxis } from "./data/epistaxis";
+import { dismenorrea } from "./data/dismenorrea";
+import { bronquitisAguda } from "./data/bronquitis-aguda";
+import { colicoBiliar } from "./data/colico-biliar";
+import { displasiaCadera } from "./data/displasia-cadera";
+import { quemaduraQuimicaOcular } from "./data/quemadura-quimica-ocular";
+import { noduloTiroideo } from "./data/nodulo-tiroideo";
+import { ulceraVenosa } from "./data/ulcera-venosa";
+import { apneaSueno } from "./data/apnea-sueno";
+import { higadoGraso } from "./data/higado-graso";
+import { brucelosis } from "./data/brucelosis";
+import { cDifficile } from "./data/c-difficile";
+import { pericarditis } from "./data/pericarditis";
+import { tdah } from "./data/tdah";
+import { bloqueoAv } from "./data/bloqueo-av";
+import { miastenia } from "./data/miastenia";
+import { esclerosisMultiple } from "./data/esclerosis-multiple";
+import { acvHemorragico } from "./data/acv-hemorragico";
+import { taponamiento } from "./data/taponamiento";
+import { aaaRoto } from "./data/aaa-roto";
+import { nacDerrameNino } from "./data/nac-derrame-nino";
+import { disenteriaShigella } from "./data/disenteria-shigella";
+import { crupGrave } from "./data/crup-grave";
+import { mastoiditis } from "./data/mastoiditis";
+import { ituEscolar } from "./data/itu-escolar";
+import { deshidratacionGraveLactante } from "./data/deshidratacion-grave-lactante";
+import { sifilisCongenita } from "./data/sifilis-congenita";
+import { autolesionesAdolescente } from "./data/autolesiones-adolescente";
+import { vihEmbarazo } from "./data/vih-embarazo";
+import { anemiaEmbarazo } from "./data/anemia-embarazo";
+import { meningitisAdultoMayor } from "./data/meningitis-adulto-mayor";
+import { acvDespertar } from "./data/acv-despertar";
+import { icChagasica } from "./data/ic-chagasica";
+import { epocBiomasa } from "./data/epoc-biomasa";
+import { neumoniaAspirativa } from "./data/neumonia-aspirativa";
+import { cadOmision } from "./data/cad-omision";
+import { hipoglucemiaAlcohol } from "./data/hipoglucemia-alcohol";
+import { pancreatitisAlcoholica } from "./data/pancreatitis-alcoholica";
+import { colecistitisDiabetico } from "./data/colecistitis-diabetico";
+import { apendicitisEmbarazo } from "./data/apendicitis-embarazo";
+import { pielonefritisObstructiva } from "./data/pielonefritis-obstructiva";
+import { hematomaEpidural } from "./data/hematoma-epidural";
+import { coAdultoMayor } from "./data/co-adulto-mayor";
+import { neumotoraxTension } from "./data/neumotorax-tension";
+import { quemaduraInhalatoria } from "./data/quemadura-inhalatoria";
+import { pronacionDolorosa } from "./data/pronacion-dolorosa";
+import { estomatitisHerpetica } from "./data/estomatitis-herpetica";
+import { pediculosis } from "./data/pediculosis";
+import { colicoLactante } from "./data/colico-lactante";
+import { condilomas } from "./data/condilomas";
+import { ciatica } from "./data/ciatica";
+import { manguitoRotador } from "./data/manguito-rotador";
+import { ansiedadGeneralizada } from "./data/ansiedad-generalizada";
+import { hipotiroidismoCongenito } from "./data/hipotiroidismo-congenito";
+import { luxacionHombro } from "./data/luxacion-hombro";
+import { abscesoPerianal } from "./data/absceso-perianal";
+import { erc } from "./data/erc";
+import { hepatitisC } from "./data/hepatitis-c";
+import { desprendimientoRetina } from "./data/desprendimiento-retina";
+import { torsionOvarica } from "./data/torsion-ovarica";
+import { violenciaSexual } from "./data/violencia-sexual";
+import { espondilitis } from "./data/espondilitis";
+import { ingestaCaustico } from "./data/ingesta-caustico";
+import { loxoscelismo } from "./data/loxoscelismo";
+import { ahogamiento } from "./data/ahogamiento";
+import { sepsisNeonatal } from "./data/sepsis-neonatal";
+import { cancerCuello } from "./data/cancer-cuello";
+import { linfomaHodgkin } from "./data/linfoma-hodgkin";
+import { fracturaExpuesta } from "./data/fractura-expuesta";
+import { encefalitisHerpetica } from "./data/encefalitis-herpetica";
+import { cushing } from "./data/cushing";
+import { hiperaldosteronismo } from "./data/hiperaldosteronismo";
+import { tetralogiaFallot } from "./data/tetralogia-fallot";
+import { sop } from "./data/sop";
+import { miomatosis } from "./data/miomatosis";
+import { crohn } from "./data/crohn";
+import { colitisUlcerosa } from "./data/colitis-ulcerosa";
+import { psoriasis } from "./data/psoriasis";
+import { melanoma } from "./data/melanoma";
+import { stevensJohnson } from "./data/stevens-johnson";
+import { osteomielitis } from "./data/osteomielitis";
+import { sindromeCompartimental } from "./data/sindrome-compartimental";
+import { fascitisNecrotizante } from "./data/fascitis-necrotizante";
+import { tetanos } from "./data/tetanos";
+import { sdra } from "./data/sdra";
+import { siadh } from "./data/siadh";
+import { rpm } from "./data/rpm";
+import { hellp } from "./data/hellp";
+import { cancerGastrico } from "./data/cancer-gastrico";
+import { hepatocarcinoma } from "./data/hepatocarcinoma";
+import { ait } from "./data/ait";
+import { fracturaVertebral } from "./data/fractura-vertebral";
+import { antifosfolipidico } from "./data/antifosfolipidico";
+import { hemofilia } from "./data/hemofilia";
+import { claudicacion } from "./data/claudicacion";
+import { iamShockCardiogenico } from "./data/iam-shock-cardiogenico";
+import { icFepAdultaMayor } from "./data/ic-fep-adulta-mayor";
+import { emergenciaHipertensiva } from "./data/emergencia-hipertensiva";
+import { pieDiabeticoIsquemico } from "./data/pie-diabetico-isquemico";
+import { ercNefropatiaDiabetica } from "./data/erc-nefropatia-diabetica";
+import { shockSepticoNeumonia } from "./data/shock-septico-neumonia";
+import { tbcVih } from "./data/tbc-vih";
+import { sifilisPrimaria } from "./data/sifilis-primaria";
+import { pielonefritisAdultaMayor } from "./data/pielonefritis-adulta-mayor";
+import { meningitisViral } from "./data/meningitis-viral";
+import { acvJovenAnticonceptivos } from "./data/acv-joven-anticonceptivos";
+import { eclampsiaAdolescente } from "./data/eclampsia-adolescente";
+import { hppRetencionPlacenta } from "./data/hpp-retencion-placenta";
+import { amenazaAborto } from "./data/amenaza-aborto";
+import { asmaAdolescenteGrave } from "./data/asma-adolescente-grave";
+import { apendicitisAdultoMayor } from "./data/apendicitis-adulto-mayor";
+import { pancreatitisHipertrigliceridemia } from "./data/pancreatitis-hipertrigliceridemia";
+import { obstruccionCancerColon } from "./data/obstruccion-cancer-colon";
+import { herniaCrural } from "./data/hernia-crural";
+import { fracturaSupracondilea } from "./data/fractura-supracondilea";
+import { traumaAbdominalBazo } from "./data/trauma-abdominal-bazo";
+import { dengueEmbarazada } from "./data/dengue-embarazada";
+import { depresionAdultoMayor } from "./data/depresion-adulto-mayor";
+import { tormentaTiroidea } from "./data/tormenta-tiroidea";
+import { cirrosisEncefalopatia } from "./data/cirrosis-encefalopatia";
+import { abscesoPulmonar } from "./data/absceso-pulmonar";
+import { anemiaHemolitica } from "./data/anemia-hemolitica";
+import { anginaEstable } from "./data/angina-estable";
+import { cancerEndometrio } from "./data/cancer-endometrio";
+import { cancerMamaLactancia } from "./data/cancer-mama-lactancia";
+import { cancerOvario } from "./data/cancer-ovario";
+import { cancerPancreas } from "./data/cancer-pancreas";
+import { cancerPulmonVenaCava } from "./data/cancer-pulmon-vena-cava";
+import { cancerVejiga } from "./data/cancer-vejiga";
+import { chagasAgudo } from "./data/chagas-agudo";
+import { coartacionAorta } from "./data/coartacion-aorta";
+import { colicoRenalEmbarazada } from "./data/colico-renal-embarazada";
+import { criptococosisMeningea } from "./data/criptococosis-meningea";
+import { demenciaVascular } from "./data/demencia-vascular";
+import { desprendimientoTrauma } from "./data/desprendimiento-trauma";
+import { enterocolitisNecrotizante } from "./data/enterocolitis-necrotizante";
+import { epiAdolescente } from "./data/epi-adolescente";
+import { epilepsiaMujerFertil } from "./data/epilepsia-mujer-fertil";
+import { escarlatina } from "./data/escarlatina";
+import { estenosisMitral } from "./data/estenosis-mitral";
+import { faAlcohol } from "./data/fa-alcohol";
+import { feocromocitoma } from "./data/feocromocitoma";
+import { fibrosisQuistica } from "./data/fibrosis-quistica";
+import { hdaAines } from "./data/hda-aines";
+import { hepatitisBEmbarazada } from "./data/hepatitis-b-embarazada";
+import { hiperparatiroidismo } from "./data/hiperparatiroidismo";
+import { hipoglucemiaRecienNacido } from "./data/hipoglucemia-recien-nacido";
+import { hsaMujerJoven } from "./data/hsa-mujer-joven";
+import { isoinmunizacionRh } from "./data/isoinmunizacion-rh";
+import { lesionMedular } from "./data/lesion-medular";
+import { leucemiaMieloideCronica } from "./data/leucemia-mieloide-cronica";
+import { lupusNefritis } from "./data/lupus-nefritis";
+import { membranaHialina } from "./data/membrana-hialina";
+import { meningitisTuberculosa } from "./data/meningitis-tuberculosa";
+import { miocardiopatiaHipertrofica } from "./data/miocardiopatia-hipertrofica";
+import { miocarditis } from "./data/miocarditis";
+import { nacAlcoholista } from "./data/nac-alcoholista";
+import { nefroticoAdulto } from "./data/nefrotico-adulto";
+import { neurolepticoMaligno } from "./data/neuroleptico-maligno";
+import { osteosarcoma } from "./data/osteosarcoma";
+import { penfigo } from "./data/penfigo";
+import { pneumocystis } from "./data/pneumocystis";
+import { prolapsoCordon } from "./data/prolapso-cordon";
+import { prostatitisAguda } from "./data/prostatitis-aguda";
+import { retinopatiaDiabetica } from "./data/retinopatia-diabetica";
+import { roturaLca } from "./data/rotura-lca";
+import { tecNino } from "./data/tec-nino";
+import { tepPuerperio } from "./data/tep-puerperio";
+import { tvpAnticonceptivos } from "./data/tvp-anticonceptivos";
+import { volvuloSigmoides } from "./data/volvulo-sigmoides";
+import { abscesoPeriamigdalino } from "./data/absceso-periamigdalino";
+import { acalasia } from "./data/acalasia";
+import { acidosisLacticaMetformina } from "./data/acidosis-lactica-metformina";
+import { acvCardioembolico } from "./data/acv-cardioembolico";
+import { alzheimerInicioPrecoz } from "./data/alzheimer-inicio-precoz";
+import { anemiaPerniciosa } from "./data/anemia-perniciosa";
+import { artritisGonococica } from "./data/artritis-gonococica";
+import { asmaEmbarazada } from "./data/asma-embarazada";
+import { bulimiaNerviosa } from "./data/bulimia-nerviosa";
+import { cadDebutNina } from "./data/cad-debut-nina";
+import { cancerColorrectalLynch } from "./data/cancer-colorrectal-lynch";
+import { cancerRenal } from "./data/cancer-renal";
+import { catarata } from "./data/catarata";
+import { celulitisLinfedema } from "./data/celulitis-linfedema";
+import { comunicacionInterventricular } from "./data/comunicacion-interventricular";
+import { dengueAdultoMayor } from "./data/dengue-adulto-mayor";
+import { ectopicoRotoDiu } from "./data/ectopico-roto-diu";
+import { ela } from "./data/ela";
+import { epocCorPulmonale } from "./data/epoc-cor-pulmonale";
+import { ercPoliquistosis } from "./data/erc-poliquistosis";
+import { esclerodermia } from "./data/esclerodermia";
+import { espondilodiscitis } from "./data/espondilodiscitis";
+import { fiebreReumatica } from "./data/fiebre-reumatica";
+import { hepatitisAutoinmune } from "./data/hepatitis-autoinmune";
+import { hipoglucemiaGlibenclamida } from "./data/hipoglucemia-glibenclamida";
+import { hipopotasemia } from "./data/hipopotasemia";
+import { hipoventilacionObesidad } from "./data/hipoventilacion-obesidad";
+import { iamAnteriorTabaquista } from "./data/iam-anterior-tabaquista";
+import { insuficienciaMitral } from "./data/insuficiencia-mitral";
+import { iraRabdomiolisis } from "./data/ira-rabdomiolisis";
+import { leucemiaLinfaticaCronica } from "./data/leucemia-linfatica-cronica";
+import { linfomaNoHodgkin } from "./data/linfoma-no-hodgkin";
+import { meningitisNeonatal } from "./data/meningitis-neonatal";
+import { miocardiopatiaPeriparto } from "./data/miocardiopatia-periparto";
+import { molaHidatiforme } from "./data/mola-hidatiforme";
+import { neumoniaLegionella } from "./data/neumonia-legionella";
+import { neurosifilis } from "./data/neurosifilis";
+import { obesidad } from "./data/obesidad";
+import { paracoccidioidomicosis } from "./data/paracoccidioidomicosis";
+import { peritonitisUlceraPerforada } from "./data/peritonitis-ulcera-perforada";
+import { placentaAcreta } from "./data/placenta-acreta";
+import { polineuropatiaDiabetica } from "./data/polineuropatia-diabetica";
+import { preeclampsiaGraveEdadAvanzada } from "./data/preeclampsia-grave-edad-avanzada";
+import { prolactinoma } from "./data/prolactinoma";
+import { ptt } from "./data/ptt";
+import { retrasoDesarrolloTea } from "./data/retraso-desarrollo-tea";
+import { schonleinHenoch } from "./data/schonlein-henoch";
+import { sepsisPuerperal } from "./data/sepsis-puerperal";
+import { tbcPleural } from "./data/tbc-pleural";
+import { toxoplasmosisCerebralVih } from "./data/toxoplasmosis-cerebral-vih";
+import { abscesoBartholin } from "./data/absceso-bartholin";
+import { acvDiseccionCarotidea } from "./data/acv-diseccion-carotidea";
+import { apendicitisPlastron } from "./data/apendicitis-plastron";
+import { bacteriuriaAsintomaticaEmbarazo } from "./data/bacteriuria-asintomatica-embarazo";
+import { bronquiectasias } from "./data/bronquiectasias";
+import { celiaquiaNino } from "./data/celiaquia-nino";
+import { chagasArritmia } from "./data/chagas-arritmia";
+import { cirrosisHepatorrenal } from "./data/cirrosis-hepatorrenal";
+import { colangitisBiliarPrimaria } from "./data/colangitis-biliar-primaria";
+import { colecistitisEmbarazada } from "./data/colecistitis-embarazada";
+import { coledocolitiasis } from "./data/coledocolitiasis";
+import { controlPrenatalAdolescente } from "./data/control-prenatal-adolescente";
+import { desnutricionInfantil } from "./data/desnutricion-infantil";
+import { diabetesInsipida } from "./data/diabetes-insipida";
+import { dm2Insulinizacion } from "./data/dm2-insulinizacion";
+import { fibrosisPulmonarIdiopatica } from "./data/fibrosis-pulmonar-idiopatica";
+import { fracturaCaderaVaron } from "./data/fractura-cadera-varon";
+import { fracturaEscafoides } from "./data/fractura-escafoides";
+import { glioblastoma } from "./data/glioblastoma";
+import { gravesEmbarazo } from "./data/graves-embarazo";
+import { hematomaSubduralCronico } from "./data/hematoma-subdural-cronico";
+import { hemocromatosis } from "./data/hemocromatosis";
+import { hemorragiaDigestivaBaja } from "./data/hemorragia-digestiva-baja";
+import { hemorragiaPospartoDesgarro } from "./data/hemorragia-posparto-desgarro";
+import { htaResistente } from "./data/hta-resistente";
+import { insuficienciaAortica } from "./data/insuficiencia-aortica";
+import { intoxicacionAlcoholicaAdolescente } from "./data/intoxicacion-alcoholica-adolescente";
+import { intoxicacionLitio } from "./data/intoxicacion-litio";
+import { intoxicacionOpioides } from "./data/intoxicacion-opioides";
+import { ituReflujoVesicoureteral } from "./data/itu-reflujo-vesicoureteral";
+import { kawasakiIncompleto } from "./data/kawasaki-incompleto";
+import { meningitisNeumococica } from "./data/meningitis-neumococica";
+import { neumoniaPostInfluenza } from "./data/neumonia-post-influenza";
+import { neumotoraxSecundarioEpoc } from "./data/neumotorax-secundario-epoc";
+import { neuralgiaTrigemino } from "./data/neuralgia-trigemino";
+import { pancreatitisCronica } from "./data/pancreatitis-cronica";
+import { paralisisBell } from "./data/paralisis-bell";
+import { pielonefritisEnfisematosa } from "./data/pielonefritis-enfisematosa";
+import { psitacosis } from "./data/psitacosis";
+import { sarcoidosis } from "./data/sarcoidosis";
+import { sincopeOrtostatico } from "./data/sincope-ortostatico";
+import { sindromeSheehan } from "./data/sindrome-sheehan";
+import { talasemiaMenor } from "./data/talasemia-menor";
+import { tbcMultirresistente } from "./data/tbc-multirresistente";
+import { tepCancer } from "./data/tep-cancer";
+import { tiroiditisPosparto } from "./data/tiroiditis-posparto";
+import { toc } from "./data/toc";
+import { tumorWilms } from "./data/tumor-wilms";
+import { vihAgudo } from "./data/vih-agudo";
+import { wolffParkinsonWhite } from "./data/wolff-parkinson-white";
+import { acromegalia } from "./data/acromegalia";
+import { acvVertebrobasilar } from "./data/acv-vertebrobasilar";
+import { artritisReumatoideaVaron } from "./data/artritis-reumatoidea-varon";
+import { asmaAines } from "./data/asma-aines";
+import { cancerEsofago } from "./data/cancer-esofago";
+import { cancerProstataCompresionMedular } from "./data/cancer-prostata-compresion-medular";
+import { cancerTesticulo } from "./data/cancer-testiculo";
+import { cancerTiroides } from "./data/cancer-tiroides";
+import { candidiasisRecurrenteDiabetica } from "./data/candidiasis-recurrente-diabetica";
+import { carcinomaBasocelular } from "./data/carcinoma-basocelular";
+import { cefaleaRacimos } from "./data/cefalea-racimos";
+import { cistitisRecurrentePosmenopausica } from "./data/cistitis-recurrente-posmenopausica";
+import { colecistitisAlitiasica } from "./data/colecistitis-alitiasica";
+import { colestasisEmbarazo } from "./data/colestasis-embarazo";
+import { comaMixedematoso } from "./data/coma-mixedematoso";
+import { coquelucheAdulta } from "./data/coqueluche-adulta";
+import { crisisSuprarrenalCorticoides } from "./data/crisis-suprarrenal-corticoides";
+import { deliriumPostoperatorio } from "./data/delirium-postoperatorio";
+import { demenciaFrontotemporal } from "./data/demencia-frontotemporal";
+import { dengueAmbulatorio } from "./data/dengue-ambulatorio";
+import { diarreaSalmonellaAdulto } from "./data/diarrea-salmonella-adulto";
+import { epilepsiaAusencias } from "./data/epilepsia-ausencias";
+import { estenosisCanalLumbar } from "./data/estenosis-canal-lumbar";
+import { hepatitisAInsuficienciaHepatica } from "./data/hepatitis-a-insuficiencia-hepatica";
+import { herniaUmbilicalAtascada } from "./data/hernia-umbilical-atascada";
+import { hipertensionIntracranealIdiopatica } from "./data/hipertension-intracraneal-idiopatica";
+import { hipocalcemiaPostiroidectomia } from "./data/hipocalcemia-postiroidectomia";
+import { histoplasmosisVih } from "./data/histoplasmosis-vih";
+import { htaAnticonceptivos } from "./data/hta-anticonceptivos";
+import { lada } from "./data/lada";
+import { latrodectismo } from "./data/latrodectismo";
+import { leishmaniasis } from "./data/leishmaniasis";
+import { migranaConAura } from "./data/migrana-con-aura";
+import { miocardiopatiaDilatadaAlcoholica } from "./data/miocardiopatia-dilatada-alcoholica";
+import { mpox } from "./data/mpox";
+import { nacEmbarazada } from "./data/nac-embarazada";
+import { neuritisOptica } from "./data/neuritis-optica";
+import { neuritisVestibular } from "./data/neuritis-vestibular";
+import { oclusionArteriaRetina } from "./data/oclusion-arteria-retina";
+import { otitisExterna } from "./data/otitis-externa";
+import { pancreatitisNecrotizante } from "./data/pancreatitis-necrotizante";
+import { parotiditis } from "./data/parotiditis";
+import { policitemiaVera } from "./data/policitemia-vera";
+import { prolapsoGenital } from "./data/prolapso-genital";
+import { quemaduraElectrica } from "./data/quemadura-electrica";
+import { roturaAquiles } from "./data/rotura-aquiles";
+import { sindromeDownNeonatal } from "./data/sindrome-down-neonatal";
+import { tbcGanglionar } from "./data/tbc-ganglionar";
+import { tept } from "./data/tept";
+import { varicelaAdultoNeumonia } from "./data/varicela-adulto-neumonia";
+import { abscesoMamarioPuerperal } from "./data/absceso-mamario-puerperal";
+import { abstinenciaAlcoholicaConvulsion } from "./data/abstinencia-alcoholica-convulsion";
+import { acvLacunar } from "./data/acv-lacunar";
+import { aitAmaurosisFugaz } from "./data/ait-amaurosis-fugaz";
+import { anafilaxiaMedicamentosa } from "./data/anafilaxia-medicamentosa";
+import { anemiaFerropenicaVaron } from "./data/anemia-ferropenica-varon";
+import { anorexiaVaron } from "./data/anorexia-varon";
+import { apendicitisMujerJoven } from "./data/apendicitis-mujer-joven";
+import { botulismo } from "./data/botulismo";
+import { cancerMamaVaron } from "./data/cancer-mama-varon";
+import { carcinomaEspinocelular } from "./data/carcinoma-espinocelular";
+import { celulitisOrbitaria } from "./data/celulitis-orbitaria";
+import { cetoacidosisEmbarazo } from "./data/cetoacidosis-embarazo";
+import { chikungunya } from "./data/chikungunya";
+import { cirrosisAscitisDebut } from "./data/cirrosis-ascitis-debut";
+import { colangiocarcinoma } from "./data/colangiocarcinoma";
+import { criptorquidia } from "./data/criptorquidia";
+import { crisisMiastenica } from "./data/crisis-miastenica";
+import { cuerpoLuteoHemorragico } from "./data/cuerpo-luteo-hemorragico";
+import { cushingIatrogenico } from "./data/cushing-iatrogenico";
+import { dengueNinoAlarma } from "./data/dengue-nino-alarma";
+import { depresionPostinfarto } from "./data/depresion-postinfarto";
+import { dermatitisContacto } from "./data/dermatitis-contacto";
+import { diverticulitisAbsceso } from "./data/diverticulitis-absceso";
+import { embarazoPostermino } from "./data/embarazo-postermino";
+import { empiemaPleural } from "./data/empiema-pleural";
+import { encefalopatiaWernicke } from "./data/encefalopatia-wernicke";
+import { endocarditisProtesisValvular } from "./data/endocarditis-protesis-valvular";
+import { endometriosisAdolescente } from "./data/endometriosis-adolescente";
+import { epiglotitisAdulto } from "./data/epiglotitis-adulto";
+import { esclerosisMultipleVaron } from "./data/esclerosis-multiple-varon";
+import { estrongiloidiasis } from "./data/estrongiloidiasis";
+import { fibromialgia } from "./data/fibromialgia";
+import { fiebreTifoidea } from "./data/fiebre-tifoidea";
+import { fisuraAnal } from "./data/fisura-anal";
+import { flutterAuricular } from "./data/flutter-auricular";
+import { fracturaTobillo } from "./data/fractura-tobillo";
+import { gravesOrbitopatiaVaron } from "./data/graves-orbitopatia-varon";
+import { guillainBarreNino } from "./data/guillain-barre-nino";
+import { hdaUlceraHpJoven } from "./data/hda-ulcera-hp-joven";
+import { hepatitisBReactivacion } from "./data/hepatitis-b-reactivacion";
+import { herpesGenital } from "./data/herpes-genital";
+import { hidrocefaliaNormotensiva } from "./data/hidrocefalia-normotensiva";
+import { hipercolesterolemiaFamiliar } from "./data/hipercolesterolemia-familiar";
+import { hiperemesisCannabinoide } from "./data/hiperemesis-cannabinoide";
+import { hipernatremia } from "./data/hipernatremia";
+import { hiperplasiaProstatica } from "./data/hiperplasia-prostatica";
+import { hiperplasiaSuprarrenalCongenita } from "./data/hiperplasia-suprarrenal-congenita";
+import { hiperpotasemiaDialisis } from "./data/hiperpotasemia-dialisis";
+import { hipertensionPulmonar } from "./data/hipertension-pulmonar";
+import { hipoacusiaSubita } from "./data/hipoacusia-subita";
+import { hiponatremiaEjercicio } from "./data/hiponatremia-ejercicio";
+import { hipotermia } from "./data/hipotermia";
+import { hipotiroidismoAdultoMayor } from "./data/hipotiroidismo-adulto-mayor";
+import { iamVentriculoDerecho } from "./data/iam-ventriculo-derecho";
+import { icDescompensadaAines } from "./data/ic-descompensada-aines";
+import { insuficienciaOvaricaPrematura } from "./data/insuficiencia-ovarica-prematura";
+import { intentoSuicidioAdultoMayor } from "./data/intento-suicidio-adulto-mayor";
+import { intoxicacionBenzodiacepinas } from "./data/intoxicacion-benzodiacepinas";
+import { intoxicacionDigoxina } from "./data/intoxicacion-digoxina";
+import { iraContrasteIodado } from "./data/ira-contraste-iodado";
+import { ituSondaVesical } from "./data/itu-sonda-vesical";
+import { lupusEmbarazo } from "./data/lupus-embarazo";
+import { malloryWeiss } from "./data/mallory-weiss";
+import { manoPieBoca } from "./data/mano-pie-boca";
+import { melanomaAcral } from "./data/melanoma-acral";
+import { meningitisListeriaEmbarazada } from "./data/meningitis-listeria-embarazada";
+import { nacResidenciaGeriatrica } from "./data/nac-residencia-geriatrica";
+import { nefritisIntersticialAguda } from "./data/nefritis-intersticial-aguda";
+import { nefropatiaIga } from "./data/nefropatia-iga";
+import { neumonitisHipersensibilidad } from "./data/neumonitis-hipersensibilidad";
+import { neutropeniaFebrilNino } from "./data/neutropenia-febril-nino";
+import { osteoporosis } from "./data/osteoporosis";
+import { pancreatitisBiliarAdultaMayor } from "./data/pancreatitis-biliar-adulta-mayor";
+import { parkinsonInicioJoven } from "./data/parkinson-inicio-joven";
+import { pilaBoton } from "./data/pila-boton";
+import { polimialgiaReumatica } from "./data/polimialgia-reumatica";
+import { politraumaPeatonAdultoMayor } from "./data/politrauma-peaton-adulto-mayor";
+import { ptiAdulta } from "./data/pti-adulta";
+import { quemaduraAdultoMayor } from "./data/quemadura-adulto-mayor";
+import { rabiaProfilaxis } from "./data/rabia-profilaxis";
+import { rciu } from "./data/rciu";
+import { sindromeIntestinoIrritable } from "./data/sindrome-intestino-irritable";
+import { sindromeSerotoninergico } from "./data/sindrome-serotoninergico";
+import { sjogren } from "./data/sjogren";
+import { sobreanticoagulacionWarfarina } from "./data/sobreanticoagulacion-warfarina";
+import { taquicardiaVentricular } from "./data/taquicardia-ventricular";
+import { tbcDiabetico } from "./data/tbc-diabetico";
+import { temblorEsencial } from "./data/temblor-esencial";
+import { tepPostoperatorioRodilla } from "./data/tep-postoperatorio-rodilla";
+import { tiroiditisSubaguda } from "./data/tiroiditis-subaguda";
+import { trastornoLimitePersonalidad } from "./data/trastorno-limite-personalidad";
+import { trombosisVenosaCerebral } from "./data/trombosis-venosa-cerebral";
+import { tvpEmbarazo } from "./data/tvp-embarazo";
+import { urticariaCronica } from "./data/urticaria-cronica";
+import { uveitisAnterior } from "./data/uveitis-anterior";
+import { vaginosisEmbarazo } from "./data/vaginosis-embarazo";
+import { vihProfilaxisPostexposicion } from "./data/vih-profilaxis-postexposicion";
+import { vonWillebrand } from "./data/von-willebrand";
+import { zosterRamsayHunt } from "./data/zoster-ramsay-hunt";
+import { abscesoCerebral } from "./data/absceso-cerebral";
+import { abscesoHepatico } from "./data/absceso-hepatico";
+import { amenorreaHipotalamica } from "./data/amenorrea-hipotalamica";
+import { anemiaMegaloblasticaVegana } from "./data/anemia-megaloblastica-vegana";
+import { anginaEstableMujer } from "./data/angina-estable-mujer";
+import { artritisPsoriasica } from "./data/artritis-psoriasica";
+import { artritisSepticaAdulto } from "./data/artritis-septica-adulto";
+import { artrosisCadera } from "./data/artrosis-cadera";
+import { asmaOcupacional } from "./data/asma-ocupacional";
+import { bocioMultinodularToxico } from "./data/bocio-multinodular-toxico";
+import { cDifficileComunitario } from "./data/c-difficile-comunitario";
+import { cancerLaringe } from "./data/cancer-laringe";
+import { cancerPulmonNoFumadora } from "./data/cancer-pulmon-no-fumadora";
+import { cervicitisClamidia } from "./data/cervicitis-clamidia";
+import { colitisIsquemica } from "./data/colitis-isquemica";
+import { colitisUlcerosaGrave } from "./data/colitis-ulcerosa-grave";
+import { constipacionFecaloma } from "./data/constipacion-fecaloma";
+import { crohnAdolescente } from "./data/crohn-adolescente";
+import { degeneracionMacular } from "./data/degeneracion-macular";
+import { demenciaCuerposLewy } from "./data/demencia-cuerpos-lewy";
+import { depresionAdolescente } from "./data/depresion-adolescente";
+import { dermatitisAtopicaAdulto } from "./data/dermatitis-atopica-adulto";
+import { dermatomiositis } from "./data/dermatomiositis";
+import { derramePleuralMaligno } from "./data/derrame-pleural-maligno";
+import { embarazoGemelar } from "./data/embarazo-gemelar";
+import { endocarditisUsuarioDrogas } from "./data/endocarditis-usuario-drogas";
+import { enfermedadNodoSinusal } from "./data/enfermedad-nodo-sinusal";
+import { epididimitis } from "./data/epididimitis";
+import { epifisiolisisCadera } from "./data/epifisiolisis-cadera";
+import { epilepsiaAdultoMayor } from "./data/epilepsia-adulto-mayor";
+import { ergeBarrett } from "./data/erge-barrett";
+import { esferocitosis } from "./data/esferocitosis";
+import { esofagitisEosinofilica } from "./data/esofagitis-eosinofilica";
+import { estenosisAorticaBicuspide } from "./data/estenosis-aortica-bicuspide";
+import { exantemaSubito } from "./data/exantema-subito";
+import { faringitisAdulto } from "./data/faringitis-adulto";
+import { fibroadenoma } from "./data/fibroadenoma";
+import { fracturaRadioNino } from "./data/fractura-radio-nino";
+import { giardiasisAdulto } from "./data/giardiasis-adulto";
+import { ginecomastiaPuberal } from "./data/ginecomastia-puberal";
+import { golpeDeCalorAdultoMayor } from "./data/golpe-de-calor-adulto-mayor";
+import { gotaTofacea } from "./data/gota-tofacea";
+import { hemorroideTrombosada } from "./data/hemorroide-trombosada";
+import { hepatitisAAdulta } from "./data/hepatitis-a-adulta";
+import { hepatitisCUsuarioDrogas } from "./data/hepatitis-c-usuario-drogas";
+import { hepatocarcinomaHepatitisB } from "./data/hepatocarcinoma-hepatitis-b";
+import { herniaInguinalLactante } from "./data/hernia-inguinal-lactante";
+import { hidatidosisPulmonarNino } from "./data/hidatidosis-pulmonar-nino";
+import { hidradenitis } from "./data/hidradenitis";
+import { hirschsprung } from "./data/hirschsprung";
+import { htaRenovascular } from "./data/hta-renovascular";
+import { incompetenciaCervical } from "./data/incompetencia-cervical";
+import { incontinenciaUrinaria } from "./data/incontinencia-urinaria";
+import { insuficienciaVenosaCronica } from "./data/insuficiencia-venosa-cronica";
+import { insulinoma } from "./data/insulinoma";
+import { intoxicacionChamico } from "./data/intoxicacion-chamico";
+import { lepra } from "./data/lepra";
+import { leptospirosisTambero } from "./data/leptospirosis-tambero";
+import { leucemiaMieloideAguda } from "./data/leucemia-mieloide-aguda";
+import { linfadenitisBartonella } from "./data/linfadenitis-bartonella";
+import { linfomaHodgkinAdulto } from "./data/linfoma-hodgkin-adulto";
+import { luxacionHombroAdultaMayor } from "./data/luxacion-hombro-adulta-mayor";
+import { malaria } from "./data/malaria";
+import { mielodisplasia } from "./data/mielodisplasia";
+import { mielopatiaCervical } from "./data/mielopatia-cervical";
+import { migranaAbusoAnalgesicos } from "./data/migrana-abuso-analgesicos";
+import { mordeduraGato } from "./data/mordedura-gato";
+import { muerteFetal } from "./data/muerte-fetal";
+import { neurocisticercosis } from "./data/neurocisticercosis";
+import { noduloTiroideoIncidental } from "./data/nodulo-tiroideo-incidental";
+import { obesidadInfantil } from "./data/obesidad-infantil";
+import { ofidismoCascabel } from "./data/ofidismo-cascabel";
+import { oxiuriasis } from "./data/oxiuriasis";
+import { paracetamolCronicoAlcoholista } from "./data/paracetamol-cronico-alcoholista";
+import { paralisisBellEmbarazada } from "./data/paralisis-bell-embarazada";
+import { pericarditisUremica } from "./data/pericarditis-uremica";
+import { perthes } from "./data/perthes";
+import { piernasInquietas } from "./data/piernas-inquietas";
+import { psicosisPuerperal } from "./data/psicosis-puerperal";
+import { pubertadPrecoz } from "./data/pubertad-precoz";
+import { raynaud } from "./data/raynaud";
+import { rosacea } from "./data/rosacea";
+import { sarampionAdulto } from "./data/sarampion-adulto";
+import { sepsisNeonatalTardia } from "./data/sepsis-neonatal-tardia";
+import { sifilisLatenteAdultaMayor } from "./data/sifilis-latente-adulta-mayor";
+import { silicosis } from "./data/silicosis";
+import { sindromeBrugada } from "./data/sindrome-brugada";
+import { sinovitisTransitoriaCadera } from "./data/sinovitis-transitoria-cadera";
+import { sopAdolescente } from "./data/sop-adolescente";
+import { stevensJohnsonAlopurinol } from "./data/stevens-johnson-alopurinol";
+import { tallaBaja } from "./data/talla-baja";
+import { tdahAdulto } from "./data/tdah-adulto";
+import { torsionOvaricaNina } from "./data/torsion-ovarica-nina";
+import { toxocariasis } from "./data/toxocariasis";
+import { trastornoNeurologicoFuncional } from "./data/trastorno-neurologico-funcional";
+import { tricomoniasis } from "./data/tricomoniasis";
+import { tunelCarpianoEmbarazo } from "./data/tunel-carpiano-embarazo";
+import { varicocele } from "./data/varicocele";
+import { vihAdultoMayor } from "./data/vih-adulto-mayor";
+import { zikaEmbarazo } from "./data/zika-embarazo";
+import { aitForamenOval } from "./data/ait-foramen-oval";
+import { alergiaProteinaLecheVaca } from "./data/alergia-proteina-leche-vaca";
+import { anemiaEnfermedadCronica } from "./data/anemia-enfermedad-cronica";
+import { anemiaFerropenicaAdolescente } from "./data/anemia-ferropenica-adolescente";
+import { apendicitisPerforadaNina } from "./data/apendicitis-perforada-nina";
+import { artritisReumatoideaAdultaMayor } from "./data/artritis-reumatoidea-adulta-mayor";
+import { ascaridiasisSuboclusion } from "./data/ascaridiasis-suboclusion";
+import { brue } from "./data/brue";
+import { carbunco } from "./data/carbunco";
+import { cefaleaPostpuncion } from "./data/cefalea-postpuncion";
+import { celiaquiaAdultaMayor } from "./data/celiaquia-adulta-mayor";
+import { celulitisNino } from "./data/celulitis-nino";
+import { cetoacidosisAdulto } from "./data/cetoacidosis-adulto";
+import { colicoRenalAdultoMayor } from "./data/colico-renal-adulto-mayor";
+import { conjuntivitisAdenovirus } from "./data/conjuntivitis-adenovirus";
+import { crisisAsmaticaPreescolar } from "./data/crisis-asmatica-preescolar";
+import { deliriumItuAdultaMayor } from "./data/delirium-itu-adulta-mayor";
+import { depresionAlcohol } from "./data/depresion-alcohol";
+import { distociaHombros } from "./data/distocia-hombros";
+import { distoniaAguda } from "./data/distonia-aguda";
+import { diverticulitisJoven } from "./data/diverticulitis-joven";
+import { dm2DiagnosticoMujer } from "./data/dm2-diagnostico-mujer";
+import { encefalopatiaPosteriorReversible } from "./data/encefalopatia-posterior-reversible";
+import { enfermedadWilson } from "./data/enfermedad-wilson";
+import { enuresis } from "./data/enuresis";
+import { epicondilitis } from "./data/epicondilitis";
+import { epilepsiaMioclonicaJuvenil } from "./data/epilepsia-mioclonica-juvenil";
+import { epistaxisPosterior } from "./data/epistaxis-posterior";
+import { ergeEmbarazo } from "./data/erge-embarazo";
+import { eritemaInfeccioso } from "./data/eritema-infeccioso";
+import { eritemaNudoso } from "./data/eritema-nudoso";
+import { erosionCorneal } from "./data/erosion-corneal";
+import { esguinceTobilloAdulta } from "./data/esguince-tobillo-adulta";
+import { estenosisCarotidea } from "./data/estenosis-carotidea";
+import { faHipertiroidismo } from "./data/fa-hipertiroidismo";
+import { fiebreSinFocoLactante } from "./data/fiebre-sin-foco-lactante";
+import { fracturaClavicula } from "./data/fractura-clavicula";
+import { fracturaCostal } from "./data/fractura-costal";
+import { gammapatiaMonoclonal } from "./data/gammapatia-monoclonal";
+import { gastroparesiaDiabetica } from "./data/gastroparesia-diabetica";
+import { gravesAdolescente } from "./data/graves-adolescente";
+import { hdaAntiagregados } from "./data/hda-antiagregados";
+import { hepatitisAlcoholica } from "./data/hepatitis-alcoholica";
+import { herniaAtascadaAdultoMayor } from "./data/hernia-atascada-adulto-mayor";
+import { hiperglucemiaCorticoides } from "./data/hiperglucemia-corticoides";
+import { hipogonadismoMasculino } from "./data/hipogonadismo-masculino";
+import { hiponatremiaPolidipsia } from "./data/hiponatremia-polidipsia";
+import { hipotiroidismoEmbarazo } from "./data/hipotiroidismo-embarazo";
+import { htaAdolescente } from "./data/hta-adolescente";
+import { incidentalomaSuprarrenal } from "./data/incidentaloma-suprarrenal";
+import { infeccionSitioQuirurgico } from "./data/infeccion-sitio-quirurgico";
+import { influenzaEmbarazada } from "./data/influenza-embarazada";
+import { intoleranciaLactosa } from "./data/intolerancia-lactosa";
+import { intoxicacionTriciclicos } from "./data/intoxicacion-triciclicos";
+import { iraObstructiva } from "./data/ira-obstructiva";
+import { laringomalacia } from "./data/laringomalacia";
+import { lesionMenisco } from "./data/lesion-menisco";
+import { liquenEscleroso } from "./data/liquen-escleroso";
+import { lumbalgiaEmbarazo } from "./data/lumbalgia-embarazo";
+import { lupusFarmacologico } from "./data/lupus-farmacologico";
+import { menopausiaQuirurgica } from "./data/menopausia-quirurgica";
+import { migranaEmbarazo } from "./data/migrana-embarazo";
+import { monoxidoEmbarazada } from "./data/monoxido-embarazada";
+import { mordeduraPerroCaraNina } from "./data/mordedura-perro-cara-nina";
+import { nacDiabetica } from "./data/nac-diabetica";
+import { neumoniaIntrahospitalaria } from "./data/neumonia-intrahospitalaria";
+import { neumotoraxCatamenial } from "./data/neumotorax-catamenial";
+import { neuralgiaPostherpetica } from "./data/neuralgia-postherpetica";
+import { noduloPulmonarSolitario } from "./data/nodulo-pulmonar-solitario";
+import { oligoamnios } from "./data/oligoamnios";
+import { otitisExternaMaligna } from "./data/otitis-externa-maligna";
+import { pancreatitisPostCpre } from "./data/pancreatitis-post-cpre";
+import { panicoDolorToracico } from "./data/panico-dolor-toracico";
+import { parafimosis } from "./data/parafimosis";
+import { pielonefritisVaron } from "./data/pielonefritis-varon";
+import { pitiriasisRosada } from "./data/pitiriasis-rosada";
+import { pitiriasisVersicolor } from "./data/pitiriasis-versicolor";
+import { priapismo } from "./data/priapismo";
+import { primeraConvulsionAdulto } from "./data/primera-convulsion-adulto";
+import { pseudogota } from "./data/pseudogota";
+import { quemaduraNaftaAdolescente } from "./data/quemadura-nafta-adolescente";
+import { retencionUrinariaPosparto } from "./data/retencion-urinaria-posparto";
+import { sangradoUterinoAnovulatorio } from "./data/sangrado-uterino-anovulatorio";
+import { scasestMujerDiabetica } from "./data/scasest-mujer-diabetica";
+import { sifilisSecundariaMujer } from "./data/sifilis-secundaria-mujer";
+import { sincopeMiccional } from "./data/sincope-miccional";
+import { sindromeLisisTumoral } from "./data/sindrome-lisis-tumoral";
+import { sindromeNefroticoAdultoMayor } from "./data/sindrome-nefrotico-adulto-mayor";
+import { sindromeRealimentacion } from "./data/sindrome-realimentacion";
+import { takotsubo } from "./data/takotsubo";
+import { tbcAdultoMayor } from "./data/tbc-adulto-mayor";
+import { tepSincope } from "./data/tep-sincope";
+import { tetanosJardinera } from "./data/tetanos-jardinera";
+import { tosIecas } from "./data/tos-iecas";
+import { trombocitopeniaHeparina } from "./data/trombocitopenia-heparina";
+import { tromboflebitisSuperficial } from "./data/tromboflebitis-superficial";
+import { tvpYeso } from "./data/tvp-yeso";
+import { vasculitisAnca } from "./data/vasculitis-anca";
+import { vihCandidiasisEsofagica } from "./data/vih-candidiasis-esofagica";
+import { vulvovaginitisPrepuberal } from "./data/vulvovaginitis-prepuberal";
+import { EXTRAS } from "./extras";
+import type { ClinicalCase } from "./types";
+
+/** Suma al caso el contenido extra de extras/ (preguntas, maniobras y preguntas del tribunal). */
+function withExtra(c: ClinicalCase): ClinicalCase {
+  const e = EXTRAS[c.id];
+  if (!e) return c;
+  return {
+    ...c,
+    anamnesis: [...c.anamnesis, ...(e.anamnesis ?? [])],
+    exam: [...c.exam, ...(e.exam ?? [])],
+    debrief: { ...c.debrief, tribunal: [...(c.debrief.tribunal ?? []), ...(e.tribunal ?? [])] },
+  };
+}
+
+/** Todos los casos, ordenados por nivel. Para sumar un caso: crear su archivo en data/ y agregarlo acá. */
+export const CASES: ClinicalCase[] = [
+  bronquiolitis,
+  cistitis,
+  hta,
+  faringitis,
+  diarrea,
+  iamInferior,
+  icDescompensada,
+  cetoacidosis,
+  preeclampsia,
+  suh,
+  dengue,
+  chagas,
+  iamAtipico,
+  guillainBarre,
+  acv,
+  anemiaFerropenica,
+  apendicitis,
+  crisisAsmatica,
+  dm2,
+  ectopico,
+  epoc,
+  meningitis,
+  monoxido,
+  nac,
+  otitis,
+  pielonefritisEmbarazo,
+  tbc,
+  tep,
+  celulitis,
+  colecistitis,
+  colicoRenal,
+  convulsionFebril,
+  crup,
+  esguince,
+  fibrilacionAuricular,
+  hda,
+  hipoglucemia,
+  ictericiaNeonatal,
+  lumbalgia,
+  panico,
+  sifilisEmbarazo,
+  urgenciaHipertensiva,
+  artritisReumatoidea,
+  epi,
+  escabiosis,
+  gota,
+  hipotiroidismo,
+  intentoSuicidio,
+  intoxicacionAlcoholica,
+  iraPrerrenal,
+  maltratoInfantil,
+  nacPediatrica,
+  politrauma,
+  retencionUrinaria,
+  vaginosis,
+  zoster,
+  abortoIncompleto,
+  anafilaxia,
+  anticoncepcionEmergencia,
+  cirrosisPbe,
+  conjuntivitis,
+  coqueluche,
+  delirium,
+  depresionPosparto,
+  diabetesGestacional,
+  erge,
+  escorpionismo,
+  fracturaCadera,
+  graves,
+  hemorragiaPosparto,
+  ituLactante,
+  leptospirosis,
+  menopausia,
+  migrana,
+  mordeduraPerro,
+  neumotoraxEspontaneo,
+  ofidismo,
+  pancreatitis,
+  rinosinusitis,
+  scasest,
+  sindromeNefrotico,
+  tecAnticoagulado,
+  vihDebut,
+  vphHsil,
+  cancerColorrectal,
+  cancerMama,
+  chagasCongenito,
+  diverticulitis,
+  endometriosis,
+  glomerulonefritis,
+  hantavirus,
+  hepatitisB,
+  hidatidosis,
+  organofosforados,
+  quemadura,
+  sincope,
+  statusEpileptico,
+  vppb,
+  anemiaMegaloblastica,
+  artritisSeptica,
+  candidiasisVulvovaginal,
+  constipacionFuncional,
+  demencia,
+  dermatitisAtopica,
+  desprendimientoPlacenta,
+  diseccionAortica,
+  dislipemia,
+  dispepsiaHp,
+  endocarditis,
+  episodioManiaco,
+  estenosisPilorica,
+  herniaAtascada,
+  hiponatremia,
+  impetigo,
+  influenza,
+  insuficienciaSuprarrenal,
+  invaginacion,
+  isquemiaAgudaMiembro,
+  mielomaHipercalcemia,
+  mononucleosis,
+  neutropeniaFebril,
+  obstruccionBridas,
+  paracetamol,
+  parkinson,
+  pieDiabetico,
+  placentaPrevia,
+  torsionTesticular,
+  varicela,
+  depresionMayor,
+  tabaquismo,
+  controlPrenatal,
+  heridaTetanos,
+  uretritis,
+  urticaria,
+  hepatitisA,
+  mastitis,
+  fracturaRadio,
+  sarampion,
+  tvp,
+  toxoplasmosisEmbarazo,
+  amenazaPartoPretermino,
+  celiaquia,
+  taquicardiaSupraventricular,
+  glaucomaAgudo,
+  cuerpoExtrano,
+  violenciaGenero,
+  triquinosis,
+  shockSeptico,
+  hsa,
+  lupus,
+  leucemia,
+  hiperpotasemia,
+  estadoHiperosmolar,
+  abstinenciaAlcoholica,
+  primerEpisodioPsicotico,
+  cancerPulmon,
+  isquemiaMesenterica,
+  meningococcemia,
+  nacAdultoJoven,
+  hipoglucemiaDm1,
+  faringitisAlergia,
+  otitisLactante,
+  anemiaLactante,
+  asmaAdulta,
+  apendicitisNino,
+  deshidratacionAdultaMayor,
+  faReciente,
+  bronquiolitisPrematuro,
+  iamCocaina,
+  cadEuglucemica,
+  preeclampsiaPosparto,
+  tepMasivo,
+  hdaVariceal,
+  giardiasis,
+  hemorroides,
+  rinitisAlergica,
+  tunelCarpiano,
+  tinaCapitis,
+  estenosisAortica,
+  anorexiaNerviosa,
+  hiperemesis,
+  pti,
+  cancerProstata,
+  golpeDeCalor,
+  colaDeCaballo,
+  arteritisTemporal,
+  kawasaki,
+  colangitis,
+  htaAdultoMayor,
+  dm2Adolescente,
+  gotaMujer,
+  migranaAdolescente,
+  erisipela,
+  chagasMujerJoven,
+  sifilisSecundaria,
+  pielonefritisMujerJoven,
+  hipotiroidismoAmiodarona,
+  hipertiroidismoApatico,
+  conjuntivitisNeonatal,
+  sarnaCostrosa,
+  zosterOftalmico,
+  tbcInfantil,
+  ictericiaIncompatibilidad,
+  convulsionFebrilCompleja,
+  ectopicoMetotrexato,
+  anafilaxiaNino,
+  varicelaEmbarazo,
+  epiAbsceso,
+  dengueShock,
+  abortoSeptico,
+  iraNefrotoxica,
+  eapHipertensivo,
+  statusNino,
+  acne,
+  cefaleaTensional,
+  insomnio,
+  sindromeMetabolico,
+  artrosisRodilla,
+  epistaxis,
+  dismenorrea,
+  bronquitisAguda,
+  colicoBiliar,
+  displasiaCadera,
+  quemaduraQuimicaOcular,
+  noduloTiroideo,
+  ulceraVenosa,
+  apneaSueno,
+  higadoGraso,
+  brucelosis,
+  cDifficile,
+  pericarditis,
+  tdah,
+  bloqueoAv,
+  miastenia,
+  esclerosisMultiple,
+  acvHemorragico,
+  taponamiento,
+  aaaRoto,
+  nacDerrameNino,
+  disenteriaShigella,
+  crupGrave,
+  mastoiditis,
+  ituEscolar,
+  deshidratacionGraveLactante,
+  sifilisCongenita,
+  autolesionesAdolescente,
+  vihEmbarazo,
+  anemiaEmbarazo,
+  meningitisAdultoMayor,
+  acvDespertar,
+  icChagasica,
+  epocBiomasa,
+  neumoniaAspirativa,
+  cadOmision,
+  hipoglucemiaAlcohol,
+  pancreatitisAlcoholica,
+  colecistitisDiabetico,
+  apendicitisEmbarazo,
+  pielonefritisObstructiva,
+  hematomaEpidural,
+  coAdultoMayor,
+  neumotoraxTension,
+  quemaduraInhalatoria,
+  pronacionDolorosa,
+  estomatitisHerpetica,
+  pediculosis,
+  colicoLactante,
+  condilomas,
+  ciatica,
+  manguitoRotador,
+  ansiedadGeneralizada,
+  hipotiroidismoCongenito,
+  luxacionHombro,
+  abscesoPerianal,
+  erc,
+  hepatitisC,
+  desprendimientoRetina,
+  torsionOvarica,
+  violenciaSexual,
+  espondilitis,
+  ingestaCaustico,
+  loxoscelismo,
+  ahogamiento,
+  sepsisNeonatal,
+  cancerCuello,
+  linfomaHodgkin,
+  fracturaExpuesta,
+  encefalitisHerpetica,
+  cushing,
+  hiperaldosteronismo,
+  tetralogiaFallot,
+  sop,
+  miomatosis,
+  crohn,
+  colitisUlcerosa,
+  psoriasis,
+  melanoma,
+  stevensJohnson,
+  osteomielitis,
+  sindromeCompartimental,
+  fascitisNecrotizante,
+  tetanos,
+  sdra,
+  siadh,
+  rpm,
+  hellp,
+  cancerGastrico,
+  hepatocarcinoma,
+  ait,
+  fracturaVertebral,
+  antifosfolipidico,
+  hemofilia,
+  claudicacion,
+  iamShockCardiogenico,
+  icFepAdultaMayor,
+  emergenciaHipertensiva,
+  pieDiabeticoIsquemico,
+  ercNefropatiaDiabetica,
+  shockSepticoNeumonia,
+  tbcVih,
+  sifilisPrimaria,
+  pielonefritisAdultaMayor,
+  meningitisViral,
+  acvJovenAnticonceptivos,
+  eclampsiaAdolescente,
+  hppRetencionPlacenta,
+  amenazaAborto,
+  asmaAdolescenteGrave,
+  apendicitisAdultoMayor,
+  pancreatitisHipertrigliceridemia,
+  obstruccionCancerColon,
+  herniaCrural,
+  fracturaSupracondilea,
+  traumaAbdominalBazo,
+  dengueEmbarazada,
+  depresionAdultoMayor,
+  tormentaTiroidea,
+  cirrosisEncefalopatia,
+  abscesoPulmonar,
+  anemiaHemolitica,
+  anginaEstable,
+  cancerEndometrio,
+  cancerMamaLactancia,
+  cancerOvario,
+  cancerPancreas,
+  cancerPulmonVenaCava,
+  cancerVejiga,
+  chagasAgudo,
+  coartacionAorta,
+  colicoRenalEmbarazada,
+  criptococosisMeningea,
+  demenciaVascular,
+  desprendimientoTrauma,
+  enterocolitisNecrotizante,
+  epiAdolescente,
+  epilepsiaMujerFertil,
+  escarlatina,
+  estenosisMitral,
+  faAlcohol,
+  feocromocitoma,
+  fibrosisQuistica,
+  hdaAines,
+  hepatitisBEmbarazada,
+  hiperparatiroidismo,
+  hipoglucemiaRecienNacido,
+  hsaMujerJoven,
+  isoinmunizacionRh,
+  lesionMedular,
+  leucemiaMieloideCronica,
+  lupusNefritis,
+  membranaHialina,
+  meningitisTuberculosa,
+  miocardiopatiaHipertrofica,
+  miocarditis,
+  nacAlcoholista,
+  nefroticoAdulto,
+  neurolepticoMaligno,
+  osteosarcoma,
+  penfigo,
+  pneumocystis,
+  prolapsoCordon,
+  prostatitisAguda,
+  retinopatiaDiabetica,
+  roturaLca,
+  tecNino,
+  tepPuerperio,
+  tvpAnticonceptivos,
+  volvuloSigmoides,
+  abscesoPeriamigdalino,
+  acalasia,
+  acidosisLacticaMetformina,
+  acvCardioembolico,
+  alzheimerInicioPrecoz,
+  anemiaPerniciosa,
+  artritisGonococica,
+  asmaEmbarazada,
+  bulimiaNerviosa,
+  cadDebutNina,
+  cancerColorrectalLynch,
+  cancerRenal,
+  catarata,
+  celulitisLinfedema,
+  comunicacionInterventricular,
+  dengueAdultoMayor,
+  ectopicoRotoDiu,
+  ela,
+  epocCorPulmonale,
+  ercPoliquistosis,
+  esclerodermia,
+  espondilodiscitis,
+  fiebreReumatica,
+  hepatitisAutoinmune,
+  hipoglucemiaGlibenclamida,
+  hipopotasemia,
+  hipoventilacionObesidad,
+  iamAnteriorTabaquista,
+  insuficienciaMitral,
+  iraRabdomiolisis,
+  leucemiaLinfaticaCronica,
+  linfomaNoHodgkin,
+  meningitisNeonatal,
+  miocardiopatiaPeriparto,
+  molaHidatiforme,
+  neumoniaLegionella,
+  neurosifilis,
+  obesidad,
+  paracoccidioidomicosis,
+  peritonitisUlceraPerforada,
+  placentaAcreta,
+  polineuropatiaDiabetica,
+  preeclampsiaGraveEdadAvanzada,
+  prolactinoma,
+  ptt,
+  retrasoDesarrolloTea,
+  schonleinHenoch,
+  sepsisPuerperal,
+  tbcPleural,
+  toxoplasmosisCerebralVih,
+  abscesoBartholin,
+  acvDiseccionCarotidea,
+  apendicitisPlastron,
+  bacteriuriaAsintomaticaEmbarazo,
+  bronquiectasias,
+  celiaquiaNino,
+  chagasArritmia,
+  cirrosisHepatorrenal,
+  colangitisBiliarPrimaria,
+  colecistitisEmbarazada,
+  coledocolitiasis,
+  controlPrenatalAdolescente,
+  desnutricionInfantil,
+  diabetesInsipida,
+  dm2Insulinizacion,
+  fibrosisPulmonarIdiopatica,
+  fracturaCaderaVaron,
+  fracturaEscafoides,
+  glioblastoma,
+  gravesEmbarazo,
+  hematomaSubduralCronico,
+  hemocromatosis,
+  hemorragiaDigestivaBaja,
+  hemorragiaPospartoDesgarro,
+  htaResistente,
+  insuficienciaAortica,
+  intoxicacionAlcoholicaAdolescente,
+  intoxicacionLitio,
+  intoxicacionOpioides,
+  ituReflujoVesicoureteral,
+  kawasakiIncompleto,
+  meningitisNeumococica,
+  neumoniaPostInfluenza,
+  neumotoraxSecundarioEpoc,
+  neuralgiaTrigemino,
+  pancreatitisCronica,
+  paralisisBell,
+  pielonefritisEnfisematosa,
+  psitacosis,
+  sarcoidosis,
+  sincopeOrtostatico,
+  sindromeSheehan,
+  talasemiaMenor,
+  tbcMultirresistente,
+  tepCancer,
+  tiroiditisPosparto,
+  toc,
+  tumorWilms,
+  vihAgudo,
+  wolffParkinsonWhite,
+  acromegalia,
+  acvVertebrobasilar,
+  artritisReumatoideaVaron,
+  asmaAines,
+  cancerEsofago,
+  cancerProstataCompresionMedular,
+  cancerTesticulo,
+  cancerTiroides,
+  candidiasisRecurrenteDiabetica,
+  carcinomaBasocelular,
+  cefaleaRacimos,
+  cistitisRecurrentePosmenopausica,
+  colecistitisAlitiasica,
+  colestasisEmbarazo,
+  comaMixedematoso,
+  coquelucheAdulta,
+  crisisSuprarrenalCorticoides,
+  deliriumPostoperatorio,
+  demenciaFrontotemporal,
+  dengueAmbulatorio,
+  diarreaSalmonellaAdulto,
+  epilepsiaAusencias,
+  estenosisCanalLumbar,
+  hepatitisAInsuficienciaHepatica,
+  herniaUmbilicalAtascada,
+  hipertensionIntracranealIdiopatica,
+  hipocalcemiaPostiroidectomia,
+  histoplasmosisVih,
+  htaAnticonceptivos,
+  lada,
+  latrodectismo,
+  leishmaniasis,
+  migranaConAura,
+  miocardiopatiaDilatadaAlcoholica,
+  mpox,
+  nacEmbarazada,
+  neuritisOptica,
+  neuritisVestibular,
+  oclusionArteriaRetina,
+  otitisExterna,
+  pancreatitisNecrotizante,
+  parotiditis,
+  policitemiaVera,
+  prolapsoGenital,
+  quemaduraElectrica,
+  roturaAquiles,
+  sindromeDownNeonatal,
+  tbcGanglionar,
+  tept,
+  varicelaAdultoNeumonia,
+  abscesoMamarioPuerperal,
+  abstinenciaAlcoholicaConvulsion,
+  acvLacunar,
+  aitAmaurosisFugaz,
+  anafilaxiaMedicamentosa,
+  anemiaFerropenicaVaron,
+  anorexiaVaron,
+  apendicitisMujerJoven,
+  botulismo,
+  cancerMamaVaron,
+  carcinomaEspinocelular,
+  celulitisOrbitaria,
+  cetoacidosisEmbarazo,
+  chikungunya,
+  cirrosisAscitisDebut,
+  colangiocarcinoma,
+  criptorquidia,
+  crisisMiastenica,
+  cuerpoLuteoHemorragico,
+  cushingIatrogenico,
+  dengueNinoAlarma,
+  depresionPostinfarto,
+  dermatitisContacto,
+  diverticulitisAbsceso,
+  embarazoPostermino,
+  empiemaPleural,
+  encefalopatiaWernicke,
+  endocarditisProtesisValvular,
+  endometriosisAdolescente,
+  epiglotitisAdulto,
+  esclerosisMultipleVaron,
+  estrongiloidiasis,
+  fibromialgia,
+  fiebreTifoidea,
+  fisuraAnal,
+  flutterAuricular,
+  fracturaTobillo,
+  gravesOrbitopatiaVaron,
+  guillainBarreNino,
+  hdaUlceraHpJoven,
+  hepatitisBReactivacion,
+  herpesGenital,
+  hidrocefaliaNormotensiva,
+  hipercolesterolemiaFamiliar,
+  hiperemesisCannabinoide,
+  hipernatremia,
+  hiperplasiaProstatica,
+  hiperplasiaSuprarrenalCongenita,
+  hiperpotasemiaDialisis,
+  hipertensionPulmonar,
+  hipoacusiaSubita,
+  hiponatremiaEjercicio,
+  hipotermia,
+  hipotiroidismoAdultoMayor,
+  iamVentriculoDerecho,
+  icDescompensadaAines,
+  insuficienciaOvaricaPrematura,
+  intentoSuicidioAdultoMayor,
+  intoxicacionBenzodiacepinas,
+  intoxicacionDigoxina,
+  iraContrasteIodado,
+  ituSondaVesical,
+  lupusEmbarazo,
+  malloryWeiss,
+  manoPieBoca,
+  melanomaAcral,
+  meningitisListeriaEmbarazada,
+  nacResidenciaGeriatrica,
+  nefritisIntersticialAguda,
+  nefropatiaIga,
+  neumonitisHipersensibilidad,
+  neutropeniaFebrilNino,
+  osteoporosis,
+  pancreatitisBiliarAdultaMayor,
+  parkinsonInicioJoven,
+  pilaBoton,
+  polimialgiaReumatica,
+  politraumaPeatonAdultoMayor,
+  ptiAdulta,
+  quemaduraAdultoMayor,
+  rabiaProfilaxis,
+  rciu,
+  sindromeIntestinoIrritable,
+  sindromeSerotoninergico,
+  sjogren,
+  sobreanticoagulacionWarfarina,
+  taquicardiaVentricular,
+  tbcDiabetico,
+  temblorEsencial,
+  tepPostoperatorioRodilla,
+  tiroiditisSubaguda,
+  trastornoLimitePersonalidad,
+  trombosisVenosaCerebral,
+  tvpEmbarazo,
+  urticariaCronica,
+  uveitisAnterior,
+  vaginosisEmbarazo,
+  vihProfilaxisPostexposicion,
+  vonWillebrand,
+  zosterRamsayHunt,
+  abscesoCerebral,
+  abscesoHepatico,
+  amenorreaHipotalamica,
+  anemiaMegaloblasticaVegana,
+  anginaEstableMujer,
+  artritisPsoriasica,
+  artritisSepticaAdulto,
+  artrosisCadera,
+  asmaOcupacional,
+  bocioMultinodularToxico,
+  cDifficileComunitario,
+  cancerLaringe,
+  cancerPulmonNoFumadora,
+  cervicitisClamidia,
+  colitisIsquemica,
+  colitisUlcerosaGrave,
+  constipacionFecaloma,
+  crohnAdolescente,
+  degeneracionMacular,
+  demenciaCuerposLewy,
+  depresionAdolescente,
+  dermatitisAtopicaAdulto,
+  dermatomiositis,
+  derramePleuralMaligno,
+  embarazoGemelar,
+  endocarditisUsuarioDrogas,
+  enfermedadNodoSinusal,
+  epididimitis,
+  epifisiolisisCadera,
+  epilepsiaAdultoMayor,
+  ergeBarrett,
+  esferocitosis,
+  esofagitisEosinofilica,
+  estenosisAorticaBicuspide,
+  exantemaSubito,
+  faringitisAdulto,
+  fibroadenoma,
+  fracturaRadioNino,
+  giardiasisAdulto,
+  ginecomastiaPuberal,
+  golpeDeCalorAdultoMayor,
+  gotaTofacea,
+  hemorroideTrombosada,
+  hepatitisAAdulta,
+  hepatitisCUsuarioDrogas,
+  hepatocarcinomaHepatitisB,
+  herniaInguinalLactante,
+  hidatidosisPulmonarNino,
+  hidradenitis,
+  hirschsprung,
+  htaRenovascular,
+  incompetenciaCervical,
+  incontinenciaUrinaria,
+  insuficienciaVenosaCronica,
+  insulinoma,
+  intoxicacionChamico,
+  lepra,
+  leptospirosisTambero,
+  leucemiaMieloideAguda,
+  linfadenitisBartonella,
+  linfomaHodgkinAdulto,
+  luxacionHombroAdultaMayor,
+  malaria,
+  mielodisplasia,
+  mielopatiaCervical,
+  migranaAbusoAnalgesicos,
+  mordeduraGato,
+  muerteFetal,
+  neurocisticercosis,
+  noduloTiroideoIncidental,
+  obesidadInfantil,
+  ofidismoCascabel,
+  oxiuriasis,
+  paracetamolCronicoAlcoholista,
+  paralisisBellEmbarazada,
+  pericarditisUremica,
+  perthes,
+  piernasInquietas,
+  psicosisPuerperal,
+  pubertadPrecoz,
+  raynaud,
+  rosacea,
+  sarampionAdulto,
+  sepsisNeonatalTardia,
+  sifilisLatenteAdultaMayor,
+  silicosis,
+  sindromeBrugada,
+  sinovitisTransitoriaCadera,
+  sopAdolescente,
+  stevensJohnsonAlopurinol,
+  tallaBaja,
+  tdahAdulto,
+  torsionOvaricaNina,
+  toxocariasis,
+  trastornoNeurologicoFuncional,
+  tricomoniasis,
+  tunelCarpianoEmbarazo,
+  varicocele,
+  vihAdultoMayor,
+  zikaEmbarazo,
+  aitForamenOval,
+  alergiaProteinaLecheVaca,
+  anemiaEnfermedadCronica,
+  anemiaFerropenicaAdolescente,
+  apendicitisPerforadaNina,
+  artritisReumatoideaAdultaMayor,
+  ascaridiasisSuboclusion,
+  brue,
+  carbunco,
+  cefaleaPostpuncion,
+  celiaquiaAdultaMayor,
+  celulitisNino,
+  cetoacidosisAdulto,
+  colicoRenalAdultoMayor,
+  conjuntivitisAdenovirus,
+  crisisAsmaticaPreescolar,
+  deliriumItuAdultaMayor,
+  depresionAlcohol,
+  distociaHombros,
+  distoniaAguda,
+  diverticulitisJoven,
+  dm2DiagnosticoMujer,
+  encefalopatiaPosteriorReversible,
+  enfermedadWilson,
+  enuresis,
+  epicondilitis,
+  epilepsiaMioclonicaJuvenil,
+  epistaxisPosterior,
+  ergeEmbarazo,
+  eritemaInfeccioso,
+  eritemaNudoso,
+  erosionCorneal,
+  esguinceTobilloAdulta,
+  estenosisCarotidea,
+  faHipertiroidismo,
+  fiebreSinFocoLactante,
+  fracturaClavicula,
+  fracturaCostal,
+  gammapatiaMonoclonal,
+  gastroparesiaDiabetica,
+  gravesAdolescente,
+  hdaAntiagregados,
+  hepatitisAlcoholica,
+  herniaAtascadaAdultoMayor,
+  hiperglucemiaCorticoides,
+  hipogonadismoMasculino,
+  hiponatremiaPolidipsia,
+  hipotiroidismoEmbarazo,
+  htaAdolescente,
+  incidentalomaSuprarrenal,
+  infeccionSitioQuirurgico,
+  influenzaEmbarazada,
+  intoleranciaLactosa,
+  intoxicacionTriciclicos,
+  iraObstructiva,
+  laringomalacia,
+  lesionMenisco,
+  liquenEscleroso,
+  lumbalgiaEmbarazo,
+  lupusFarmacologico,
+  menopausiaQuirurgica,
+  migranaEmbarazo,
+  monoxidoEmbarazada,
+  mordeduraPerroCaraNina,
+  nacDiabetica,
+  neumoniaIntrahospitalaria,
+  neumotoraxCatamenial,
+  neuralgiaPostherpetica,
+  noduloPulmonarSolitario,
+  oligoamnios,
+  otitisExternaMaligna,
+  pancreatitisPostCpre,
+  panicoDolorToracico,
+  parafimosis,
+  pielonefritisVaron,
+  pitiriasisRosada,
+  pitiriasisVersicolor,
+  priapismo,
+  primeraConvulsionAdulto,
+  pseudogota,
+  quemaduraNaftaAdolescente,
+  retencionUrinariaPosparto,
+  sangradoUterinoAnovulatorio,
+  scasestMujerDiabetica,
+  sifilisSecundariaMujer,
+  sincopeMiccional,
+  sindromeLisisTumoral,
+  sindromeNefroticoAdultoMayor,
+  sindromeRealimentacion,
+  takotsubo,
+  tbcAdultoMayor,
+  tepSincope,
+  tetanosJardinera,
+  tosIecas,
+  trombocitopeniaHeparina,
+  tromboflebitisSuperficial,
+  tvpYeso,
+  vasculitisAnca,
+  vihCandidiasisEsofagica,
+  vulvovaginitisPrepuberal,
+]
+  .map(withExtra)
+  .sort((a, b) => a.level - b.level);
+
+export function getCase(id: string): ClinicalCase | undefined {
+  return CASES.find((c) => c.id === id);
+}

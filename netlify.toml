@@ -1,0 +1,14 @@
+# Next.js en Netlify: el runtime de Next (OpenNext) se agrega solo al detectar el framework.
+[build]
+  command = "pnpm build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+# El service worker siempre fresco, así cada versión nueva llega enseguida.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+    Service-Worker-Allowed = "/"
